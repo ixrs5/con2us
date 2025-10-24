@@ -1,0 +1,194 @@
+{
+  "heroPhotos": {
+    "description": "Floating photo cards displayed on the home page",
+    "images": [
+      {
+        "filename": "couple-1.jpg",
+        "path": "src/assets/couple-1.jpg",
+        "alt": "Together in golden hour"
+      },
+      {
+        "filename": "couple-2.jpg",
+        "path": "src/assets/couple-2.jpg",
+        "alt": "Sunset silhouette"
+      },
+      {
+        "filename": "couple-3.jpg",
+        "path": "src/assets/couple-3.jpg",
+        "alt": "Coffee shop moments"
+      },
+      {
+        "filename": "couple-4.jpg",
+        "path": "src/assets/couple-4.jpg",
+        "alt": "Tender embrace"
+      },
+      {
+        "filename": "couple-5.jpg",
+        "path": "src/assets/couple-5.jpg",
+        "alt": "Beach walk"
+      },
+      {
+        "filename": "couple-6.jpg",
+        "path": "src/assets/couple-6.jpg",
+        "alt": "Cherry blossom kiss"
+      }
+    ]
+  },
+  "galleryMoments": {
+    "description": "24 moments displayed in the paginated gallery",
+    "imagesPerPage": 9,
+    "totalPages": 3,
+    "images": [
+      {
+        "filename": "moment-1.jpg",
+        "path": "src/assets/moment-1.jpg",
+        "caption": "Dancing in the evening light",
+        "date": "January 2024"
+      },
+      {
+        "filename": "moment-2.jpg",
+        "path": "src/assets/moment-2.jpg",
+        "caption": "Picnic in the park",
+        "date": "February 2024"
+      },
+      {
+        "filename": "moment-3.jpg",
+        "path": "src/assets/moment-3.jpg",
+        "caption": "Cooking together",
+        "date": "February 2024"
+      },
+      {
+        "filename": "moment-4.jpg",
+        "path": "src/assets/moment-4.jpg",
+        "caption": "Stargazing night",
+        "date": "March 2024"
+      },
+      {
+        "filename": "moment-5.jpg",
+        "path": "src/assets/moment-5.jpg",
+        "caption": "Cozy reading time",
+        "date": "March 2024"
+      },
+      {
+        "filename": "moment-6.jpg",
+        "path": "src/assets/moment-6.jpg",
+        "caption": "Gift exchange",
+        "date": "April 2024"
+      },
+      {
+        "filename": "moment-7.jpg",
+        "path": "src/assets/moment-7.jpg",
+        "caption": "Perfect selfie",
+        "date": "April 2024"
+      },
+      {
+        "filename": "moment-8.jpg",
+        "path": "src/assets/moment-8.jpg",
+        "caption": "Coffee date",
+        "date": "May 2024"
+      },
+      {
+        "filename": "moment-9.jpg",
+        "path": "src/assets/moment-9.jpg",
+        "caption": "Mountain adventure",
+        "date": "May 2024"
+      },
+      {
+        "filename": "moment-10.jpg",
+        "path": "src/assets/moment-10.jpg",
+        "caption": "Sunset together",
+        "date": "June 2024"
+      },
+      {
+        "filename": "moment-11.jpg",
+        "path": "src/assets/moment-11.jpg",
+        "caption": "Amusement park fun",
+        "date": "June 2024"
+      },
+      {
+        "filename": "moment-12.jpg",
+        "path": "src/assets/moment-12.jpg",
+        "caption": "Ice skating",
+        "date": "July 2024"
+      },
+      {
+        "filename": "moment-13.jpg",
+        "path": "src/assets/moment-13.jpg",
+        "caption": "Movie night",
+        "date": "July 2024"
+      },
+      {
+        "filename": "moment-14.jpg",
+        "path": "src/assets/moment-14.jpg",
+        "caption": "Boat ride",
+        "date": "August 2024"
+      },
+      {
+        "filename": "moment-15.jpg",
+        "path": "src/assets/moment-15.jpg",
+        "caption": "Birthday celebration",
+        "date": "August 2024"
+      },
+      {
+        "filename": "moment-16.jpg",
+        "path": "src/assets/moment-16.jpg",
+        "caption": "Rainy day romance",
+        "date": "September 2024"
+      },
+      {
+        "filename": "moment-17.jpg",
+        "path": "src/assets/moment-17.jpg",
+        "caption": "Art gallery visit",
+        "date": "September 2024"
+      },
+      {
+        "filename": "moment-18.jpg",
+        "path": "src/assets/moment-18.jpg",
+        "caption": "Playing with pets",
+        "date": "October 2024"
+      },
+      {
+        "filename": "moment-19.jpg",
+        "path": "src/assets/moment-19.jpg",
+        "caption": "Farmers market",
+        "date": "October 2024"
+      },
+      {
+        "filename": "moment-20.jpg",
+        "path": "src/assets/moment-20.jpg",
+        "caption": "Christmas decorating",
+        "date": "November 2024"
+      },
+      {
+        "filename": "moment-21.jpg",
+        "path": "src/assets/moment-21.jpg",
+        "caption": "Peaceful morning",
+        "date": "November 2024"
+      },
+      {
+        "filename": "moment-22.jpg",
+        "path": "src/assets/moment-22.jpg",
+        "caption": "Love letters",
+        "date": "December 2024"
+      },
+      {
+        "filename": "moment-23.jpg",
+        "path": "src/assets/moment-23.jpg",
+        "caption": "City lights",
+        "date": "December 2024"
+      },
+      {
+        "filename": "moment-24.jpg",
+        "path": "src/assets/moment-24.jpg",
+        "caption": "Anniversary toast",
+        "date": "December 2024"
+      }
+    ]
+  },
+  "notes": {
+    "imageFormat": "JPG",
+    "lazyLoading": true,
+    "optimization": "All images should be optimized (WebP/AVIF preferred) for production",
+    "replacementInstructions": "To replace with your own photos, simply replace the image files in src/assets/ keeping the same filenames, or update the import paths in src/pages/Home.tsx and src/pages/Moments.tsx"
+  }
+}
