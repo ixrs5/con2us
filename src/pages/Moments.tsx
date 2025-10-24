@@ -3,7 +3,6 @@ import { Lightbox } from "@/components/Lightbox";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { soundPlayer } from "@/utils/soundEffects";
 
 import moment1 from "@/assets/moment-1.jpg";
 import moment2 from "@/assets/moment-2.jpg";
@@ -31,30 +30,30 @@ import moment23 from "@/assets/moment-23.jpg";
 import moment24 from "@/assets/moment-24.jpg";
 
 const moments = [
-  { src: moment1, caption: "", date: "October 2024" },
-  { src: moment2, caption: "", date: "" },
-  { src: moment3, caption: "", date: "February 2024" },
-  { src: moment4, caption: "", date: "March 2024" },
-  { src: moment5, caption: "", date: "March 2024" },
-  { src: moment6, caption: "", date: "April 2024" },
+  { src: moment1, caption: "Dancing in the evening light", date: "January 2024" },
+  { src: moment2, caption: "Picnic in the park", date: "February 2024" },
+  { src: moment3, caption: "Cooking together", date: "February 2024" },
+  { src: moment4, caption: "Stargazing night", date: "March 2024" },
+  { src: moment5, caption: "Cozy reading time", date: "March 2024" },
+  { src: moment6, caption: "Gift exchange", date: "April 2024" },
   { src: moment7, caption: "Perfect selfie", date: "April 2024" },
-  { src: moment8, caption: "", date: "May 2024" },
-  { src: moment9, caption: "", date: "May 2024" },
-  { src: moment10, caption: "", date: "June 2024" },
-  { src: moment11, caption: "", date: "June 2024" },
-  { src: moment12, caption: "", date: "July 2024" },
-  { src: moment13, caption: "", date: "July 2024" },
-  { src: moment14, caption: "", date: "August 2024" },
-  { src: moment15, caption: "", date: "August 2024" },
-  { src: moment16, caption: "", date: "September 2024" },
-  { src: moment17, caption: "", date: "September 2024" },
-  { src: moment18, caption: "", date: "October 2024" },
-  { src: moment19, caption: "", date: "October 2024" },
-  { src: moment20, caption: "", date: "November 2024" },
-  { src: moment21, caption: "", date: "November 2024" },
-  { src: moment22, caption: "", date: "December 2024" },
-  { src: moment23, caption: "", date: "December 2024" },
-  { src: moment24, caption: "", date: "December 2024" },
+  { src: moment8, caption: "Coffee date", date: "May 2024" },
+  { src: moment9, caption: "Mountain adventure", date: "May 2024" },
+  { src: moment10, caption: "Sunset together", date: "June 2024" },
+  { src: moment11, caption: "Amusement park fun", date: "June 2024" },
+  { src: moment12, caption: "Ice skating", date: "July 2024" },
+  { src: moment13, caption: "Movie night", date: "July 2024" },
+  { src: moment14, caption: "Boat ride", date: "August 2024" },
+  { src: moment15, caption: "Birthday celebration", date: "August 2024" },
+  { src: moment16, caption: "Rainy day romance", date: "September 2024" },
+  { src: moment17, caption: "Art gallery visit", date: "September 2024" },
+  { src: moment18, caption: "Playing with pets", date: "October 2024" },
+  { src: moment19, caption: "Farmers market", date: "October 2024" },
+  { src: moment20, caption: "Christmas decorating", date: "November 2024" },
+  { src: moment21, caption: "Peaceful morning", date: "November 2024" },
+  { src: moment22, caption: "Love letters", date: "December 2024" },
+  { src: moment23, caption: "City lights", date: "December 2024" },
+  { src: moment24, caption: "Anniversary toast", date: "December 2024" },
 ];
 
 const IMAGES_PER_PAGE = 9;
@@ -62,7 +61,6 @@ const IMAGES_PER_PAGE = 9;
 const Moments = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [lightboxImage, setLightboxImage] = useState<number | null>(null);
-  const [soundEnabled, setSoundEnabled] = useState(false);
   const [direction, setDirection] = useState(0);
 
   const totalPages = Math.ceil(moments.length / IMAGES_PER_PAGE);
@@ -70,19 +68,10 @@ const Moments = () => {
   const endIndex = startIndex + IMAGES_PER_PAGE;
   const currentMoments = moments.slice(startIndex, endIndex);
 
-  useEffect(() => {
-    const initSound = async () => {
-      const enabled = await soundPlayer.requestConsent();
-      setSoundEnabled(enabled);
-    };
-    initSound();
-  }, []);
-
   const goToNextPage = () => {
     if (currentPage < totalPages - 1) {
       setDirection(1);
       setCurrentPage(currentPage + 1);
-      if (soundEnabled) soundPlayer.play('page-flip');
     }
   };
 
@@ -90,7 +79,6 @@ const Moments = () => {
     if (currentPage > 0) {
       setDirection(-1);
       setCurrentPage(currentPage - 1);
-      if (soundEnabled) soundPlayer.play('page-flip');
     }
   };
 
@@ -164,9 +152,6 @@ const Moments = () => {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <p className="text-white p-4 font-medium">{moment.caption}</p>
-                  </div>
                 </motion.div>
               ))}
             </motion.div>
